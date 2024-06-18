@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 10,
-    backgroundColor: 'white',
+    backgroundColor: '#FAFAFD',
     paddingTop: StatusBar.currentHeight,
     marginBottom: 60, // Add margin bottom for space
   },

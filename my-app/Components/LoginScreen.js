@@ -1,9 +1,10 @@
 // LoginScreen.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar, Image } from 'react-native';
 import CustomStatusBar from './CustomStatusBar';
 import { FontAwesome, MaterialCommunityIcons } from 'react-native-vector-icons';
 import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const LoginScreen = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -45,16 +46,14 @@ const LoginScreen = ({ navigation }) => {
         <View style={styles.divider} />
       </View>
       <View style={styles.socialContainer}>
-        <TouchableOpacity style={styles.socialButton}>
-          <Icon name="logo-apple" size={40} color="#000" />
+      <TouchableOpacity style={styles.socialButton}>
+          <Image source={require('../Images/apple.png')} style={styles.socialIcon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <MaterialCommunityIcons name="google" size={40} color="#4285F4" />
+          <Image source={require('../Images/Google.png')} style={styles.socialIcon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <View style={styles.facebookIconContainer}>
-            <FontAwesome name="facebook-f" size={24} color="#fff" />
-          </View>
+          <Image source={require('../Images/fb.jpg')} style={styles.socialIcon} />
         </TouchableOpacity>
       </View>
       <Text style={styles.registerText}>
@@ -72,6 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     padding: 16,
+    backgroundColor: '#FAFAFD',
   },
   title: {
     fontSize: 22,
@@ -133,10 +133,18 @@ const styles = StyleSheet.create({
     color: '#AFB0B6',
     fontSize: 13,
   },
+  socialIcon: {
+    width:58,
+    height: 56,
+    resizeMode: 'contain',
+    backgroundColor: '#ffff',
+    borderRadius: 500,
+  },
   socialContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
     marginBottom: 20,
+    
   },
   socialButton: {
     marginHorizontal: 10,
@@ -144,14 +152,6 @@ const styles = StyleSheet.create({
     height: 56,
     borderRadius: 20,
     backgroundColor: '#FFFF',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  facebookIconContainer: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#356899',
     justifyContent: 'center',
     alignItems: 'center',
   },
