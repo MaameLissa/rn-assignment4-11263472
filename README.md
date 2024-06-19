@@ -77,6 +77,7 @@ The `Image` component displays images associated with job listings and user avat
 - Displays user avatar at the top of the screen.
 - Shows company logos or job images within each job listing.
 
+
 ### Icon (from react-native-vector-icons)
 
 The `Icon` component renders icons for search and filter functionality.
@@ -104,3 +105,16 @@ The `styles` object includes CSS-like styles applied to various components throu
 ## Conclusion
 
 This README provides an overview of the main components used in the Job Search App, detailing their purpose and usage within the application's context.
+
+##Screenshots
+![1](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/9633da84-30dd-4a48-8f36-c481b026b49c)
+![9](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/3280cb87-e0c0-49bf-b842-3710ac022d5d)
+![2](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/10c53b33-47a6-4a9b-85d8-9da9a329f0b7)
+![3](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/c6cae8ab-5b99-467d-a6b8-3b8d4fd9f24c)
+![4](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/de2e049a-e370-4be5-87a3-cc794a670e07)
+![6](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/49669977-8f02-4fef-8ad4-17f683efad6b)
+![5](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/65b524eb-6871-4a01-bf15-de33e9067b1d)
+![7](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/4071b521-8ba3-4fb9-9de8-1f840c2d8074)
+![8](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/4c66cb2c-7e0e-4322-a8cc-a614aef7261a)
+
+
