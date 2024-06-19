@@ -216,7 +216,6 @@ const Homescreen = ({ route }) => {
               </View>
             </View>
           )}
-          keyExtractor={(item, index) => index.toString()}
         />
       </ScrollView>
     </SafeAreaView>
@@ -317,6 +316,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     color: "white",
+    
   },
   jobCompany: {
     fontSize: 16,
