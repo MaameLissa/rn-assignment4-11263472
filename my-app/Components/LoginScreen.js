@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     marginBottom: 5, // Adjust space below title if needed
   },
   welcome: {
-    fontSize: 24,
+    fontSize: 20,
     marginVertical: 8,
     color: "#0D0D26",
     fontWeight: "600",

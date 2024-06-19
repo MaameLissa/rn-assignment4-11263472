@@ -131,19 +131,20 @@ const popularJobs = [
   },
 ];
 
-const Homescreen = () => {
+const Homescreen = ({ route }) => {
+  const { name, email } = route.params;
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
         {/* User Info */}
         <View style={styles.userInfo}>
           <View>
-            <Text style={styles.userName}>Melissa</Text>
-            <Text style={styles.userEmail}>Melissa@gmail.com</Text>
+            <Text style={styles.userName}>{name}</Text>
+            <Text style={styles.userEmail}>{email}</Text>
           </View>
           <Image
             style={styles.userImage}
-            source={require("../Images/fb.jpg")}
+            source={require("../Images/user.jpg")}
           />
         </View>
 
@@ -179,15 +180,13 @@ const Homescreen = () => {
           horizontal
           renderItem={({ item }) => (
             <View style={styles.featuredJobCard}>
-              <View style={styles.featuredJobTop}>
-                <Image style={styles.featuredJobImage} source={item.image} />
-                <View style={styles.featuredJobTextContainer}>
-                  <Text style={styles.jobTitle}>{item.jobTitle}</Text>
-                  <Text style={styles.jobCompany}>{item.jobShortText}</Text>
-                  <View style={styles.featuredJobBottom}>
-                    <Text style={styles.jobSalary}>{item.salary}</Text>
-                    <Text style={styles.jobLocation}>{item.location}</Text>
-                  </View>
+              <Image style={styles.featuredJobImage} source={item.image} />
+              <View style={styles.featuredJobTextContainer}>
+                <Text style={styles.jobTitle}>{item.jobTitle}</Text>
+                <Text style={styles.jobCompany}>{item.jobShortText}</Text>
+                <View style={styles.featuredJobBottom}>
+                  <Text style={styles.jobSalary}>{item.salary}</Text>
+                  <Text style={styles.jobLocation}>{item.location}</Text>
                 </View>
               </View>
             </View>
@@ -217,6 +216,7 @@ const Homescreen = () => {
               </View>
             </View>
           )}
+          keyExtractor={(item, index) => index.toString()}
         />
       </ScrollView>
     </SafeAreaView>
@@ -229,7 +229,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F8F8",
   },
   scrollView: {
-    padding: 20,
+    padding: 10,
+    margin: 7,
   },
   userInfo: {
     flexDirection: "row",
@@ -247,8 +248,9 @@ const styles = StyleSheet.create({
   },
   userImage: {
     borderRadius: 40,
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
+    marginTop: 10,
   },
   searchSection: {
     flexDirection: "row",
@@ -291,57 +293,25 @@ const styles = StyleSheet.create({
   },
   seeAllText: {
     fontSize: 16,
-    color: "#5386E4",
+    color: "#95969D",
   },
   featuredJobCard: {
     backgroundColor: "#5386E4",
-    borderRadius: 10,
+    borderRadius: 20,
     padding: 20,
     marginRight: 10,
     width: 280,
     height: 186,
     justifyContent: "space-between",
   },
-  featuredJobTop: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
   featuredJobImage: {
-    width: 40,
-    height: 40,
-    borderRadius: 8,
-    marginRight: 10,
+    width: 50,
+    height: 50,
+    borderRadius: 10,
+    marginBottom: 10,
   },
   featuredJobTextContainer: {
     flex: 1,
-  },
-  featuredJobBottom: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 10,
-  },
-  jobItem: {
-    flexDirection: "row",
-    padding: 10,
-    borderColor: "grey",
-    borderWidth: 1,
-    borderRadius: 8,
-    marginVertical: 5,
-    backgroundColor: "white",
-  },
-  jobImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 8,
-  },
-  jobDetails: {
-    marginLeft: 10,
-    flex: 1,
-  },
-  popularJobBottom: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 10,
   },
   jobTitle: {
     fontSize: 18,
@@ -351,6 +321,12 @@ const styles = StyleSheet.create({
   jobCompany: {
     fontSize: 16,
     color: "white",
+    marginBottom: 10,
+  },
+  featuredJobBottom: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   jobSalary: {
     fontSize: 16,
@@ -360,21 +336,45 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "white",
   },
+  jobItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "white",
+    padding: 20,
+    borderRadius: 20,
+    marginBottom: 10,
+    width: "100%",
+    height: 74,
+  },
+  jobImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 10,
+    marginRight: 10,
+  },
+  jobDetails: {
+    flex: 1,
+  },
   jobTitlePopular: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "black",
   },
   jobCompanyPopular: {
-    fontSize: 16,
+    fontSize: 12,
     color: "grey",
   },
+  popularJobBottom: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 10,
+  },
   jobSalaryPopular: {
-    fontSize: 16,
-    color: "green",
+    fontSize: 14,
+    fontWeight: "bold",
   },
   jobLocationPopular: {
-    fontSize: 14,
+    fontSize: 12,
     color: "grey",
   },
 });
