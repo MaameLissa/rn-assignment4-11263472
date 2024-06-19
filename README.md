@@ -116,5 +116,6 @@ This README provides an overview of the main components used in the Job Search A
 ![5](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/65b524eb-6871-4a01-bf15-de33e9067b1d)
 ![7](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/4071b521-8ba3-4fb9-9de8-1f840c2d8074)
 ![8](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/4c66cb2c-7e0e-4322-a8cc-a614aef7261a)
+![10](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/19386bca-15d8-43bb-88dc-ee87b85bd255)
 
 
