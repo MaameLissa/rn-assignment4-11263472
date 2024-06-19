@@ -106,7 +106,7 @@ The `styles` object includes CSS-like styles applied to various components throu
 
 This README provides an overview of the main components used in the Job Search App, detailing their purpose and usage within the application's context.
 
-##Screenshots
+## Screenshots
 ![1](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/9633da84-30dd-4a48-8f36-c481b026b49c)
 ![9](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/3280cb87-e0c0-49bf-b842-3710ac022d5d)
 ![2](https://github.com/MaameLissa/rn-assignment4-11263472/assets/170031712/10c53b33-47a6-4a9b-85d8-9da9a329f0b7)
