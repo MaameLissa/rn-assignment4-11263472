@@ -175,23 +175,27 @@ const Homescreen = ({ route }) => {
           </TouchableOpacity>
         </View>
         <FlatList
-          data={jobListings}
-          keyExtractor={(item) => item.jobTitle}
-          horizontal
-          renderItem={({ item }) => (
-            <View style={styles.featuredJobCard}>
-              <Image style={styles.featuredJobImage} source={item.image} />
-              <View style={styles.featuredJobTextContainer}>
-                <Text style={styles.jobTitle}>{item.jobTitle}</Text>
-                <Text style={styles.jobCompany}>{item.jobShortText}</Text>
-                <View style={styles.featuredJobBottom}>
-                  <Text style={styles.jobSalary}>{item.salary}</Text>
-                  <Text style={styles.jobLocation}>{item.location}</Text>
-                </View>
-              </View>
-            </View>
-          )}
-        />
+  data={jobListings}
+  keyExtractor={(item) => item.jobTitle}
+  horizontal
+  renderItem={({ item }) => (
+    <View style={styles.featuredJobCard}>
+      <View style={styles.featuredJobCardContent}>
+        <Image style={styles.featuredJobImage} source={item.image} />
+        <View style={styles.featuredJobText}>
+          <Text style={styles.jobTitle}>{item.jobTitle}</Text>
+          <Text style={styles.jobCompany}>{item.jobShortText}</Text>
+        </View>
+      </View>
+      <View style={styles.featuredJobTextContainer}>
+        <View style={styles.featuredJobBottom}>
+          <Text style={styles.jobSalary}>{item.salary}</Text>
+          <Text style={styles.jobLocation}>{item.location}</Text>
+        </View>
+      </View>
+    </View>
+  )}
+/>
 
         {/* Popular Jobs */}
         <View style={styles.sectionHeader}>
@@ -303,25 +307,31 @@ const styles = StyleSheet.create({
     height: 186,
     justifyContent: "space-between",
   },
+  featuredJobCardContent: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   featuredJobImage: {
     width: 50,
     height: 50,
     borderRadius: 10,
-    marginBottom: 10,
+    marginRight: 10,
   },
-  featuredJobTextContainer: {
+  featuredJobText: {
     flex: 1,
   },
   jobTitle: {
     fontSize: 18,
     fontWeight: "bold",
     color: "white",
-    
   },
   jobCompany: {
     fontSize: 16,
     color: "white",
     marginBottom: 10,
+  },
+  featuredJobTextContainer: {
+    flex: 1,
   },
   featuredJobBottom: {
     flexDirection: "row",
@@ -331,11 +341,15 @@ const styles = StyleSheet.create({
   jobSalary: {
     fontSize: 16,
     color: "white",
+    marginBottom: 50,
   },
   jobLocation: {
     fontSize: 14,
     color: "white",
+    
   },
+
+
   jobItem: {
     flexDirection: "row",
     alignItems: "center",
