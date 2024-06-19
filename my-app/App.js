@@ -8,9 +8,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <LoginScreen/> */}
-      {/* <Homescreen /> */}
-      <Text></Text>
-      <LoginScreen />
+      <Homescreen />
       <StatusBar style="auto" />
     </View>
   );
