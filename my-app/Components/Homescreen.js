@@ -175,27 +175,25 @@ const Homescreen = ({ route }) => {
           </TouchableOpacity>
         </View>
         <FlatList
-  data={jobListings}
-  keyExtractor={(item) => item.jobTitle}
-  horizontal
-  renderItem={({ item }) => (
-    <View style={styles.featuredJobCard}>
-      <View style={styles.featuredJobCardContent}>
-        <Image style={styles.featuredJobImage} source={item.image} />
-        <View style={styles.featuredJobText}>
-          <Text style={styles.jobTitle}>{item.jobTitle}</Text>
-          <Text style={styles.jobCompany}>{item.jobShortText}</Text>
-        </View>
-      </View>
-      <View style={styles.featuredJobTextContainer}>
-        <View style={styles.featuredJobBottom}>
-          <Text style={styles.jobSalary}>{item.salary}</Text>
-          <Text style={styles.jobLocation}>{item.location}</Text>
-        </View>
-      </View>
-    </View>
-  )}
-/>
+          data={jobListings}
+          keyExtractor={(item) => item.jobTitle}
+          horizontal
+          renderItem={({ item }) => (
+            <View style={styles.featuredJobCard}>
+              <View style={styles.featuredJobCardContent}>
+                <Image style={styles.featuredJobImage} source={item.image} />
+                <View style={styles.featuredJobText}>
+                  <Text style={styles.jobTitle}>{item.jobTitle}</Text>
+                  <Text style={styles.jobCompany}>{item.jobShortText}</Text>
+                </View>
+              </View>
+              <View style={styles.featuredJobBottom}>
+                <Text style={styles.jobSalary}>{item.salary}</Text>
+                <Text style={styles.jobLocation}>{item.location}</Text>
+              </View>
+            </View>
+          )}
+        />
 
         {/* Popular Jobs */}
         <View style={styles.sectionHeader}>
@@ -341,14 +339,11 @@ const styles = StyleSheet.create({
   jobSalary: {
     fontSize: 16,
     color: "white",
-    marginBottom: 50,
   },
   jobLocation: {
     fontSize: 14,
     color: "white",
-    
   },
-
 
   jobItem: {
     flexDirection: "row",
